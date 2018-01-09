@@ -14,7 +14,7 @@ namespace Chenyuan.Data.HR
     {
         //您的上下文已配置为从您的应用程序的配置文件(App.config 或 Web.config)
         //使用“HRDataContext”连接字符串。默认情况下，此连接字符串针对您的 LocalDb 实例上的
-        //“Zupo.Data.HR.HRDataContext”数据库。
+        //“Chenyuan.Data.HR.HRDataContext”数据库。
         // 
         //如果您想要针对其他数据库和/或数据库提供程序，请在应用程序配置文件中修改“HRDataContext”
         //连接字符串。
@@ -31,6 +31,6 @@ namespace Chenyuan.Data.HR
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
-        //public DbSet<EmployeeInfo> UserInfo { get; set; }
+        public DbSet<EmployeeInfo> EmployeeInfo { get; set; }
     }
 }

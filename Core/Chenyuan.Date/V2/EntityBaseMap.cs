@@ -36,6 +36,7 @@ namespace Chenyuan.Date.V2
         /// </summary>
         protected virtual void InitProperties()
         {
+
             this.Property(x => x.Timestamp)
                 .IsRequired()
                 .HasMaxLength(8)

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chenyuan.Data.HR.Mappings.Mappings
+namespace Chenyuan.Data.HR.Mappings
 {
     public class EmployeeInfoMap : EntityBaseMap<EmployeeInfo>
     {
@@ -15,9 +15,14 @@ namespace Chenyuan.Data.HR.Mappings.Mappings
         /// </summary>
         protected override void InitProperties()
         {
+
             base.InitProperties();
 
             #region Property Mappings for class EmployeeInfo
+
+
+            //设置表名
+            //this.ToTable("EmployeeInfo");
 
             this.Property(x => x.CreatedById)
                 .IsOptional();

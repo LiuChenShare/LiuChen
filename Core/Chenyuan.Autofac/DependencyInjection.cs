@@ -120,7 +120,7 @@ namespace Chenyuan.Autofac
             binPath = binPath.Substring(0, binPath.LastIndexOf("/")).Replace("file:///", "");
             if (Directory.Exists(binPath))
             {
-                foreach (string dllPath in Directory.GetFiles(binPath, "Zupo.*.dll"))
+                foreach (string dllPath in Directory.GetFiles(binPath, "Chenyuan.*.dll"))
                 {
                     try
                     {
@@ -133,7 +133,7 @@ namespace Chenyuan.Autofac
                 }
             }
             builder = new ContainerBuilder();
-            var assemblys = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("Zupo."));
+            var assemblys = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("Chenyuan."));
             foreach (var assembly in assemblys)
             {
                 try

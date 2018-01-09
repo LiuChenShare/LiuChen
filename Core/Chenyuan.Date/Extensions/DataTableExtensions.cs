@@ -88,7 +88,7 @@ namespace Chenyuan.Date.Extensions
             {
                 string columnname = string.IsNullOrEmpty(parentName) ? p.Name : $"{parentName}.{p.Name}";
 
-                if (searchSub && !p.PropertyType.IsValueType && p.PropertyType.IsClass && p.PropertyType.Namespace.StartsWith("Zupo"))
+                if (searchSub && !p.PropertyType.IsValueType && p.PropertyType.IsClass && p.PropertyType.Namespace.StartsWith("Chenyuan"))
                 {
                     var curValue = dr.FillEntity(p.PropertyType, columnname);
                     p.SetValue(obj, curValue);
@@ -157,7 +157,7 @@ namespace Chenyuan.Date.Extensions
             foreach (var p in properties)
             {
                 string columnname = string.IsNullOrEmpty(parentName) ? p.Name : $"{parentName}.{p.Name}";
-                if (searchSub && !p.PropertyType.IsValueType && p.PropertyType.IsClass && p.PropertyType.Namespace.StartsWith("Zupo"))
+                if (searchSub && !p.PropertyType.IsValueType && p.PropertyType.IsClass && p.PropertyType.Namespace.StartsWith("Chenyuan"))
                 {
                     var curValue = dr.FillEntity(p.PropertyType, columnname);
                     p.SetValue(obj, curValue);

@@ -12,7 +12,7 @@ namespace Chenyuan.Data.HR.Entity.Entities
     public partial class EmployeeInfo : EntityBase<Guid>
     {
 
-        #region Properties
+        #region Properties 
 
         /// <summary>
         /// 创建者Id
@@ -83,6 +83,16 @@ namespace Chenyuan.Data.HR.Entity.Entities
         /// </remarks>
         //bak[MaxLength(20)]
         public virtual string EmployeeNo
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 员工名称
+        /// </summary>
+        //bak[MaxLength(20)]
+        public virtual string Name
         {
             get;
             set;

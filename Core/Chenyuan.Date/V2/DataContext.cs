@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Chenyuan.Data;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Reflection;
 
@@ -27,30 +29,30 @@ namespace Chenyuan.Date.V2
         }
 
 
-        ///// <summary>
-        ///// struct func
-        ///// </summary>
-        ///// <param name="modelBuilder"></param>
-        //protected override void OnModeChenyuanreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        //    this.RegisterModel(modelBuilder);
-        //    base.OnModeChenyuanreating(modelBuilder);
-        //}
+        /// <summary>
+        /// struct func
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            this.RegisterModel(modelBuilder);
+            base.OnModelCreating(modelBuilder);
+        }
 
-        ///// <summary>
-        ///// 实体创建处理函数
-        ///// </summary>
-        ///// <param name="modelBuilder"></param>
-        //protected virtual void RegisterModel(DbModelBuilder modelBuilder)
-        //{
-        //    IEnumerable<Type> typesToRegister = this.GetTypesToRegister();
-        //    foreach (var type in typesToRegister)
-        //    {
-        //        dynamic configurationInstance = Activator.CreateInstance(type);
-        //        modelBuilder.Configurations.Add(configurationInstance);
-        //    }
-        //}
+        /// <summary>
+        /// 实体创建处理函数
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected virtual void RegisterModel(DbModelBuilder modelBuilder)
+        {
+            IEnumerable<Type> typesToRegister = this.GetTypesToRegister();
+            foreach (var type in typesToRegister)
+            {
+                dynamic configurationInstance = Activator.CreateInstance(type);
+                modelBuilder.Configurations.Add(configurationInstance);
+            }
+        }
         /// <summary>
         /// 获取当前database下实体mapping,注册模型
         /// </summary>

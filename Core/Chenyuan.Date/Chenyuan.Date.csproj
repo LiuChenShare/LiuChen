@@ -48,19 +48,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseDatabase.cs" />
+    <Compile Include="BaseEfDataProvider.cs" />
+    <Compile Include="BaseEntityMap.cs" />
+    <Compile Include="ChenyuanObjectContext.cs" />
     <Compile Include="ColumnAttribute.cs" />
-    <Compile Include="Entity\EntityBase.cs" />
-    <Compile Include="Entity\EntityObject.cs" />
-    <Compile Include="Entity\IEntity.cs" />
-    <Compile Include="Entity\IEntityId.cs" />
+    <Compile Include="EntityObjectState.cs" />
     <Compile Include="Extensions\DataTableExtensions.cs" />
-    <Compile Include="IDatabase.cs" />
-    <Compile Include="IPagedList.cs" />
-    <Compile Include="PagedList.cs" />
+    <Compile Include="Hooks\HookedEntityEntry.cs" />
+    <Compile Include="Hooks\HookEntityMetadata.cs" />
+    <Compile Include="Hooks\IHook.cs" />
+    <Compile Include="Hooks\IPostActionHook .cs" />
+    <Compile Include="Hooks\IPreActionHook.cs" />
+    <Compile Include="Hooks\PostActionHook.cs" />
+    <Compile Include="Hooks\PostDeleteHook.cs" />
+    <Compile Include="Hooks\PostInsertHook.cs" />
+    <Compile Include="Hooks\PostUpdateHook.cs" />
+    <Compile Include="Hooks\PreActionHook.cs" />
+    <Compile Include="Hooks\PreDeleteHook.cs" />
+    <Compile Include="Hooks\PreInsertHook.cs" />
+    <Compile Include="Hooks\PreUpdateHook.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="IDbSetProxy.cs" />
+    <Compile Include="IEfDataProvider.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IZupoDBContext.cs" />
+    <Compile Include="IZupoRepository.cs" />
+    <Compile Include="ObjectContextBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="V2\DataContext.cs" />
     <Compile Include="V2\EntityBaseMap.cs" />
+    <Compile Include="ZupoObjectContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chenyuan\Chenyuan.csproj">

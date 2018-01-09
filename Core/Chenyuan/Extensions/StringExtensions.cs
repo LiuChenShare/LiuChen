@@ -670,7 +670,7 @@ namespace Chenyuan.Extensions
         /// <param name="value">String to split</param>
         /// <returns>The string after being split</returns>
         [DebuggerStepThrough]
-        public static string SplitPascaChenyuanase(this string value)
+        public static string SplitPascalCase(this string value)
         {
             StringBuilder sb = new StringBuilder();
             char[] ca = value.ToCharArray();
@@ -730,7 +730,7 @@ namespace Chenyuan.Extensions
         /// <param name="instance"></param>
         /// <returns></returns>
         [DebuggerStepThrough]
-        public static string ToCameChenyuanase(this string instance)
+        public static string ToCamelCase(this string instance)
         {
             char ch = instance[0];
             return (ch.ToString().ToLowerInvariant() + instance.Substring(1));
@@ -1389,7 +1389,7 @@ namespace Chenyuan.Extensions
         /// <param name="s"></param>
         /// <returns></returns>
 		[DebuggerStepThrough]
-        public static string RemoveInvalidXmChenyuanhars(this string s)
+        public static string RemoveInvalidXmlChars(this string s)
         {
             if (s.IsNullOrEmpty())
                 return s;

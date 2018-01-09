@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chenyuan.Messages
+{
+	/// <summary>
+	/// 
+	/// </summary>
+	public sealed class Token
+	{
+		private readonly string _key;
+		private readonly string _value;
+		private readonly bool _neverHtmlEncoded;
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="key"></param>
+		/// <param name="value"></param>
+		public Token(string key, string value) :
+			this(key, value, false)
+		{
+
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="key"></param>
+		/// <param name="value"></param>
+		/// <param name="neverHtmlEncoded"></param>
+		public Token(string key, string value, bool neverHtmlEncoded)
+		{
+			_key = key;
+			_value = value;
+			_neverHtmlEncoded = neverHtmlEncoded;
+		}
+
+		/// <summary>
+		/// Token key
+		/// </summary>
+		public string Key { get { return _key; } }
+		/// <summary>
+		/// Token value
+		/// </summary>
+		public string Value { get { return _value; } }
+		/// <summary>
+		/// Indicates whether this token should not be HTML encoded
+		/// </summary>
+		public bool NeverHtmlEncoded { get { return _neverHtmlEncoded; } }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
+		public override string ToString()
+		{
+			return string.Format("{0}: {1}", Key, Value);
+		}
+	}
+}

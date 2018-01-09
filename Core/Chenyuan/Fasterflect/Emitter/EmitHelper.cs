@@ -824,14 +824,14 @@ namespace Chenyuan.Fasterflect.Emitter
         /// calls the method indicated on the evaluation stack (as a pointer to an entry point) 
         /// with arguments described by a calling convention using an unmanaged calling convention.
         /// </summary>
-        /// <param name="unmanagedCaChenyuanhenyuanonv">The unmanaged calling convention to be used.</param>
+        /// <param name="unmanagedCallConv">The unmanaged calling convention to be used.</param>
         /// <param name="returnType">The Type of the result.</param>
         /// <param name="parameterTypes">The types of the required arguments to the instruction.</param>
         /// <seealso cref="OpCodes.Calli">OpCodes.Calli</seealso>
         /// <seealso cref="System.Reflection.Emit.ILGenerator.EmitCalli(OpCode,CallingConvention,Type,Type[])">ILGenerator.EmitCalli</seealso>
-        public EmitHelper calli(CallingConvention unmanagedCaChenyuanhenyuanonv, Type returnType, Type[] parameterTypes)
+        public EmitHelper calli(CallingConvention unmanagedCallConv, Type returnType, Type[] parameterTypes)
         {
-            _ilGenerator.EmitCalli(OpCodes.Calli, unmanagedCaChenyuanhenyuanonv, returnType, parameterTypes);
+            _ilGenerator.EmitCalli(OpCodes.Calli, unmanagedCallConv, returnType, parameterTypes);
             return this;
         }
 
@@ -4015,17 +4015,17 @@ namespace Chenyuan.Fasterflect.Emitter
         }
 
         /// <summary>
-        /// Calls ILGenerator.Emit(<see cref="OpCodes.TaiChenyuanall"/>) that
+        /// Calls ILGenerator.Emit(<see cref="OpCodes.Tailcall"/>) that
         /// performs a postfixed method call instruction such that the current method's stack frame 
         /// is removed before the actual call instruction is executed.
         /// </summary>
-        /// <seealso cref="OpCodes.TaiChenyuanall">OpCodes.TaiChenyuanall</seealso>
+        /// <seealso cref="OpCodes.Tailcall">OpCodes.Tailcall</seealso>
         /// <seealso cref="System.Reflection.Emit.ILGenerator.Emit(OpCode)">ILGenerator.Emit</seealso>
-        public EmitHelper taiChenyuanall
+        public EmitHelper tailcall
         {
             get
             {
-                _ilGenerator.Emit(OpCodes.TaiChenyuanall);
+                _ilGenerator.Emit(OpCodes.Tailcall);
                 return this;
             }
         }
