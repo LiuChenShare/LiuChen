@@ -1,0 +1,7 @@
+﻿Enable-Migrations -ContextTypeName "LC.Data.HR.HRDataContext"  启动迁移（-ContextTypeName "LC.Data.HR.HRDataContext"）可以不要
+
+
+Add-Migration AddBlogUrl   创建一个新的迁移
+
+
+Update-Database     应用到数据库

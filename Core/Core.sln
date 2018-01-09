@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Modules", "1-Modules", "{D17248B6-5D7B-4235-A8B1-A622C29DCB4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Extensions", "2-Extensions", "{4923AD1B-CD14-4A6D-822F-CAC1AE997735}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Common", "3-Common", "{8AF19CDB-3CC4-4A01-807B-ACDC21A6773B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chenyuan", "Chenyuan\Chenyuan.csproj", "{AC03BB93-9668-4B5F-A719-482A489105A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chenyuan.Autofac", "Chenyuan.Autofac\Chenyuan.Autofac.csproj", "{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chenyuan.DAL", "Chenyuan.DAL\Chenyuan.DAL.csproj", "{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chenyuan.Date", "Chenyuan.Date\Chenyuan.Date.csproj", "{7D453151-CDC3-41F8-9777-70B94E162DC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC03BB93-9668-4B5F-A719-482A489105A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC03BB93-9668-4B5F-A719-482A489105A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC03BB93-9668-4B5F-A719-482A489105A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC03BB93-9668-4B5F-A719-482A489105A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D453151-CDC3-41F8-9777-70B94E162DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D453151-CDC3-41F8-9777-70B94E162DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D453151-CDC3-41F8-9777-70B94E162DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D453151-CDC3-41F8-9777-70B94E162DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC03BB93-9668-4B5F-A719-482A489105A1} = {D17248B6-5D7B-4235-A8B1-A622C29DCB4B}
+		{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8} = {4923AD1B-CD14-4A6D-822F-CAC1AE997735}
+		{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB} = {D17248B6-5D7B-4235-A8B1-A622C29DCB4B}
+		{7D453151-CDC3-41F8-9777-70B94E162DC3} = {D17248B6-5D7B-4235-A8B1-A622C29DCB4B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FDD3A38-95AE-4060-B603-6F913DBDF92B}
+	EndGlobalSection
+EndGlobal
