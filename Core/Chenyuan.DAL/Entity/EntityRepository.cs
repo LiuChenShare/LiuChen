@@ -12,6 +12,8 @@ using System.Linq;
 using System.Reflection;
 using Chenyuan.Date.Extensions;
 using System.Data.Entity;
+using Chenyuan.Log;
+using Chenyuan.Data;
 
 namespace Chenyuan.DAL.Entity
 {

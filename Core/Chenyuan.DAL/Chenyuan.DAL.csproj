@@ -74,6 +74,10 @@
       <Project>{7d453151-cdc3-41f8-9777-70b94e162dc3}</Project>
       <Name>Chenyuan.Date</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chenyuan\Chenyuan.csproj">
+      <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
+      <Name>Chenyuan</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

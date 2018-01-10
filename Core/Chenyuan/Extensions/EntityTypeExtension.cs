@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Chenyuan.Assemblies;
 using Chenyuan.Data;
+using Chenyuan.Data.Entity;
 using Chenyuan.Extensions;
 using Chenyuan.Infrastructure;
 

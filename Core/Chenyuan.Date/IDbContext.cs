@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using Chenyuan.Data.Entity;
+using Chenyuan.Date.Entity;
 
 namespace Chenyuan.Data
 {
