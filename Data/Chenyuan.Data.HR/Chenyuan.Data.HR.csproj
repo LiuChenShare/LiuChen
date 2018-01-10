@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +51,29 @@
   <ItemGroup>
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="HRDataContext.cs" />
+    <Compile Include="Migrations\201801100626176_Update2018-01-10p1.cs" />
+    <Compile Include="Migrations\201801100626176_Update2018-01-10p1.Designer.cs">
+      <DependentUpon>201801100626176_Update2018-01-10p1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801100632065_Update2018-01-10p2.cs" />
+    <Compile Include="Migrations\201801100632065_Update2018-01-10p2.Designer.cs">
+      <DependentUpon>201801100632065_Update2018-01-10p2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801100635123_Update2018-01-10p3.cs" />
+    <Compile Include="Migrations\201801100635123_Update2018-01-10p3.Designer.cs">
+      <DependentUpon>201801100635123_Update2018-01-10p3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Chenyuan.Date\Chenyuan.Date.csproj">
       <Project>{7d453151-cdc3-41f8-9777-70b94e162dc3}</Project>
       <Name>Chenyuan.Date</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Chenyuan\Chenyuan.csproj">
+      <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
+      <Name>Chenyuan</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chenyuan.Data.HR.Entity\Chenyuan.Data.HR.Entity.csproj">
       <Project>{5b6ef5c5-b3eb-4fca-8f08-db00ddfdc58e}</Project>
@@ -71,6 +90,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HRDataContext使用说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801100626176_Update2018-01-10p1.resx">
+      <DependentUpon>201801100626176_Update2018-01-10p1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801100632065_Update2018-01-10p2.resx">
+      <DependentUpon>201801100632065_Update2018-01-10p2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801100635123_Update2018-01-10p3.resx">
+      <DependentUpon>201801100635123_Update2018-01-10p3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

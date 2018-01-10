@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -39,6 +42,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +61,10 @@
     <ProjectReference Include="..\..\Core\Chenyuan.Date\Chenyuan.Date.csproj">
       <Project>{7d453151-cdc3-41f8-9777-70b94e162dc3}</Project>
       <Name>Chenyuan.Date</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Chenyuan\Chenyuan.csproj">
+      <Project>{AC03BB93-9668-4B5F-A719-482A489105A1}</Project>
+      <Name>Chenyuan</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chenyuan.Data.HR.Entity\Chenyuan.Data.HR.Entity.csproj">
       <Project>{5b6ef5c5-b3eb-4fca-8f08-db00ddfdc58e}</Project>

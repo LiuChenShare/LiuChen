@@ -1,33 +1,31 @@
-﻿using Chenyuan.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using Chenyuan.Extensions;
 
-namespace Chenyuan.Date.V2
+namespace Chenyuan.Data.V2
 {
-    /// <summary>
-    /// 数据库上下文类
-    /// </summary>
-    public class DataContext : DbContext
+    public class MyDataContext : DbContext
     {
         /// <summary>
         /// database entity mapping assembly
         /// </summary>
         private readonly string _mappingAssembly;
-        public DataContext(IDatabase database)
-            : base(database.ConnString)
+        public MyDataContext(IDatabase database) : base(database.ConnString)
         {
             _mappingAssembly = database.MappingsAssembly;
         }
 
-        public DataContext(string nameOrConnectionString, string mappingAssembly) : base(nameOrConnectionString)
+        public MyDataContext(string nameOrConnectionString, string mappingAssembly) : base(nameOrConnectionString)
         {
             _mappingAssembly = mappingAssembly;
         }
-
 
         /// <summary>
         /// struct func
@@ -35,12 +33,9 @@ namespace Chenyuan.Date.V2
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            //this.RegisterModel(modelBuilder);
-            //base.OnModelCreating(modelBuilder);
-            modelBuilder.Types().Configure(entity => entity.ToTable(entity.ClrType.Name));
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            this.RegisterModel(modelBuilder);
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Types().Configure(entity => entity.ToTable("Shop_" + entity.ClrType.Name));
         }
 
         /// <summary>
@@ -56,6 +51,7 @@ namespace Chenyuan.Date.V2
                 modelBuilder.Configurations.Add(configurationInstance);
             }
         }
+
         /// <summary>
         /// 获取当前database下实体mapping,注册模型
         /// </summary>
@@ -70,5 +66,6 @@ namespace Chenyuan.Date.V2
                                   select t;
             return typesToRegister.ToList();
         }
+        
     }
 }

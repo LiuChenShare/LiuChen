@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B6EF5C5-B3EB-4FCA-8F08-DB00DDFDC58E}</ProjectGuid>
+    <ProjectGuid>7cef9e48-9181-4d61-8837-78fdeab4223c</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chenyuan.Data.HR.Entity</RootNamespace>
-    <AssemblyName>Chenyuan.Data.HR.Entity</AssemblyName>
+    <RootNamespace>Chenyuan.Domain</RootNamespace>
+    <AssemblyName>Chenyuan.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,25 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System"/>
+    
+    <Reference Include="System.Core"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Data.DataSetExtensions"/>
+    
+    
+    <Reference Include="Microsoft.CSharp"/>
+    
+    <Reference Include="System.Data"/>
+    
+    <Reference Include="System.Net.Http"/>
+    
+    <Reference Include="System.Xml"/>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\EmployeeInfo.cs" />
-    <Compile Include="HRDatabase.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\Chenyuan\Chenyuan.csproj">
-      <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
-      <Name>Chenyuan</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
+ </Project>
