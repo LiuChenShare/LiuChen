@@ -228,6 +228,10 @@
     <Compile Include="IVxObjectInfo.cs" />
     <Compile Include="IWebHelper.cs" />
     <Compile Include="IWorkContext.cs" />
+    <Compile Include="Log\IDataLog.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogInfo.cs" />
+    <Compile Include="Log\LogType.cs" />
     <Compile Include="Messages\Token.cs" />
     <Compile Include="Messages\TokenCollection.cs" />
     <Compile Include="ObjectId.cs" />
