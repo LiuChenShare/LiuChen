@@ -47,12 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DbContextFactory.cs" />
+    <Compile Include="BaseDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataContext使用说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Chenyuan.Date\Chenyuan.Date.csproj">
+      <Project>{7d453151-cdc3-41f8-9777-70b94e162dc3}</Project>
+      <Name>Chenyuan.Date</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Chenyuan\Chenyuan.csproj">
+      <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
+      <Name>Chenyuan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chenyuan.Data.Base.Entity\Chenyuan.Data.Base.Entity.csproj">
+      <Project>{617c44f6-0400-482e-99e8-7d2ce4ab5c47}</Project>
+      <Name>Chenyuan.Data.Base.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chenyuan.Data.Base.Mappings\Chenyuan.Data.Base.Mappings.csproj">
+      <Project>{e48b0be9-07fa-4e0f-8ada-aded823d1575}</Project>
+      <Name>Chenyuan.Data.Base.Mappings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

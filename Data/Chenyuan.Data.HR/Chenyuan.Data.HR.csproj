@@ -89,7 +89,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HRDataContext使用说明.txt" />
+    <Content Include="DataContext使用说明.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801100626176_Update2018-01-10p1.resx">
