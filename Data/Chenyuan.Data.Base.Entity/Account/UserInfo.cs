@@ -16,7 +16,7 @@ namespace Chenyuan.Data.Base.Entity
         /// <summary>
         /// 账号id
         /// </summary>
-        public virtual string AccountId { get; set; }
+        public virtual Guid AccountId { get; set; }
 
         /// <summary>
         /// 账户名

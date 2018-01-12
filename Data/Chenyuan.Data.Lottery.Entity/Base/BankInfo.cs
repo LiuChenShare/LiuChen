@@ -13,6 +13,11 @@ namespace Chenyuan.Data.Lottery.Entity
     public class BankInfo : EntityBase<Guid>
     {
         /// <summary>
+        /// 账号id
+        /// </summary>
+        public virtual Guid AccountId { get; set; }
+
+        /// <summary>
         /// 金币
         /// </summary>
         public virtual double Gold { get; set; }

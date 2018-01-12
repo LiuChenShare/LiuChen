@@ -16,6 +16,9 @@ namespace Chenyuan.Lottery.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //在Global.asax的Application_Start中注册任务  
+            Timedtask.CensusdemoTask censusdemoTask = new Timedtask.CensusdemoTask();
         }
     }
 }

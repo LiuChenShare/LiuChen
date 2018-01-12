@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F49131D8-9C4C-4CFF-B4C8-F6537DEE7F8D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Chenyuan.Data.Lottery.Entity</RootNamespace>
-    <AssemblyName>Chenyuan.Data.Lottery.Entity</AssemblyName>
+    <ProjectGuid>{AB1B4101-2A6C-4C2D-93DD-CE7C6181DB06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chenyuan.Lottery.Services</RootNamespace>
+    <AssemblyName>Chenyuan.Lottery.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,14 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,15 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BankInfo.cs" />
-    <Compile Include="Base\BillInfo.cs" />
-    <Compile Include="LotteryDatabase.cs" />
-    <Compile Include="Base\LotteryNumber.cs" />
+    <Compile Include="BankInfoRepository.cs" />
+    <Compile Include="LotteryNumberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Chenyuan.DAL\Chenyuan.DAL.csproj">
@@ -69,10 +54,13 @@
       <Name>Chenyuan.Date</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Chenyuan\Chenyuan.csproj">
-      <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
+      <Project>{AC03BB93-9668-4B5F-A719-482A489105A1}</Project>
       <Name>Chenyuan</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\Chenyuan.Data.Lottery.Entity\Chenyuan.Data.Lottery.Entity.csproj">
+      <Project>{F49131D8-9C4C-4CFF-B4C8-F6537DEE7F8D}</Project>
+      <Name>Chenyuan.Data.Lottery.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

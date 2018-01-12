@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chenyuan.DAL.Entity
+namespace Chenyuan.DAL
 {
     public interface IRepository<TEntity> where TEntity : EntityObject
     {
