@@ -30,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,13 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountInfoRepository.cs" />
+    <Compile Include="DAL\AccountInfoRepository.cs" />
     <Compile Include="AccountService.cs" />
-    <Compile Include="BankInfoRepository.cs" />
-    <Compile Include="LotteryNumberRepository.cs" />
+    <Compile Include="DAL\BankInfoRepository.cs" />
+    <Compile Include="Base\BaseService.cs" />
+    <Compile Include="DAL\LotteryNumberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Chenyuan.Autofac\Chenyuan.Autofac.csproj">
+      <Project>{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}</Project>
+      <Name>Chenyuan.Autofac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Chenyuan.DAL\Chenyuan.DAL.csproj">
       <Project>{ab6f5985-f6d2-444c-bfa5-36ceebe68eeb}</Project>
       <Name>Chenyuan.DAL</Name>
@@ -71,6 +87,10 @@
       <Project>{76aaab48-97a9-4892-b432-f6bdf8490360}</Project>
       <Name>Chenyuan.Lottery.IServices</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

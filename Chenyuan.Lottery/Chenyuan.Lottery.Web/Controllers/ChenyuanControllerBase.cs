@@ -15,11 +15,11 @@ namespace Chenyuan.Lottery.Web.Controllers
     /// </summary>
     public abstract class ChenyuanControllerBase : Controller
     {
-        protected readonly Chenyuan.Lottery.Web.WebCore.IWorkContext _workContext;
+        protected readonly IWorkContext _workContext;
 
         public ChenyuanControllerBase()
         {
-            _workContext = DependencyInjection.Current.Resolve<Chenyuan.Lottery.Web.WebCore.IWorkContext>();
+            _workContext = DependencyInjection.Current.Resolve<IWorkContext>();
         }
 
         //private Chenyuan.Lottery.Web.WebCore.IWorkContext _workContext;

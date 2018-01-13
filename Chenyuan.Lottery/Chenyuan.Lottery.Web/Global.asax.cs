@@ -30,23 +30,24 @@ namespace Chenyuan.Lottery.Web
             Timedtask.CensusdemoTask censusdemoTask = new Timedtask.CensusdemoTask();
 
 
-            ////依赖注入
-            //var injection = DependencyInjection.Current;
-            ////register datacontext
-            //injection.Builder.Register<BaseDataContext>(c => new BaseDataContext(new ChenyuanDatabase())).Keyed<DataContext>(typeof(ChenyuanDatabase)).InstancePerRequest();
-            ////injection.Builder.Register<HRDataContext>(c => new HRDataContext(new HRDatabase())).Keyed<DataContext>(typeof(HRDatabase)).InstancePerRequest();
-            ////injection.Builder.Register<OperateDataContext>(c => new OperateDataContext(new OperateDatabase())).Keyed<DataContext>(typeof(OperateDatabase)).InstancePerRequest();
-            ////injection.Builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            //依赖注入
+            var injection = DependencyInjection.Current;
+            //register datacontext
+            injection.Builder.Register<BaseDataContext>(c => new BaseDataContext(new ChenyuanDatabase())).Keyed<DataContext>(typeof(ChenyuanDatabase)).InstancePerRequest();
+            //injection.Builder.Register<HRDataContext>(c => new HRDataContext(new HRDatabase())).Keyed<DataContext>(typeof(HRDatabase)).InstancePerRequest();
+            //injection.Builder.Register<OperateDataContext>(c => new OperateDataContext(new OperateDatabase())).Keyed<DataContext>(typeof(OperateDatabase)).InstancePerRequest();
             //injection.Builder.RegisterControllers(Assembly.GetExecutingAssembly());
-            //DependencyInjection.Current.ScopeContainer = injection.Builder.Build();
+            injection.Builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            DependencyInjection.Current.ScopeContainer = injection.Builder.Build();
             //GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(DependencyInjection.Current.ScopeContainer);
-            ////AutofacWebApiDependencyResolver
-            ///*JSON序列化loop处理*/
-            //var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            //json.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(DependencyInjection.Current.ScopeContainer));
+            //AutofacWebApiDependencyResolver
+            /*JSON序列化loop处理*/
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            json.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             //启动auto
-            AutoFacConfig.Register();
+            //AutoFacConfig.Register();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Chenyuan.Autofac;
 using Chenyuan.Lottery.IServices;
 using Chenyuan.Lottery.Services;
+using Chenyuan.Lottery.Web.WebCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,7 @@ namespace Chenyuan.Lottery.Web
         public void ServiceInjection()
         {
             //请求上下文注册
-            Builder.RegisterType<Chenyuan.Lottery.Web.WebCore.WorkContext>().As<Chenyuan.Lottery.Web.WebCore.IWorkContext>().InstancePerRequest();
-            Builder.RegisterType<Chenyuan.Lottery.Web.WebCore.WebHelperBase>().As<Chenyuan.Lottery.Web.WebCore.IWebHelper>().InstancePerRequest();
+            Builder.RegisterType<WorkContext>().As<IWorkContext>().InstancePerRequest();
             //Builder.RegisterType<WebRequestInfo>().As<IRequestInfo>().InstancePerRequest();
             //Builder.RegisterType<WorkContext>().As<IWorkContext>().InstancePerRequest();
             //资源注册

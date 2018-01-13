@@ -1,0 +1,2 @@
+﻿DataProvider: sqlserver
+DataConnectionString: data source=DESKTOP-D51E9P0;initial catalog=Chenyuan-Base;persist security info=True;user id=sa;password=l88888888;

@@ -1,5 +1,14 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using Chenyuan.DAL;
+using Chenyuan.Data;
+using Chenyuan.Data.Base;
+using Chenyuan.Data.Base.Entity;
+using Chenyuan.Date.Entity;
+using Chenyuan.Date.V2;
+using Chenyuan.Lottery.IServices;
+using Chenyuan.Lottery.Services;
+using Chenyuan.Lottery.Web.WebCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +70,17 @@ namespace Chenyuan.Lottery.Web
                 .AsImplementedInterfaces(); //指明创建的stypes这个集合中所有类的对象实例，以其接口的形式保存  
 
 
+            builder.Register<BaseDataContext>(c => new BaseDataContext(new ChenyuanDatabase())).Keyed<DataContext>(typeof(ChenyuanDatabase)).InstancePerRequest();
+            //请求上下文注册
+            builder.RegisterType<WorkContext>().As<IWorkContext>().InstancePerRequest();
+            builder.RegisterGeneric(typeof(EntityRepository<>)).As(typeof(DAL.IRepository<>)).InstancePerDependency();
+            //仓储
+            builder.RegisterType<AccountInfoRepository>();
+            //服务注册
+            builder.RegisterType<AccountService>().As<IAccountService>();
+
+
+
             //第四步：创建一个真正的AutoFac的工作容器  
             var container = builder.Build();
 
@@ -71,12 +91,7 @@ namespace Chenyuan.Lottery.Web
             //var obj = container.Resolve<IsysFunctionServices>(); //只有有特殊需求的时候可以通过这样的形式来拿。
             //一般情况下没有必要这样来拿，因为AutoFac会自动工作（即：会自动去类的带参数的构造函数中找与容器中key一致的参数类型，
             //并将对象注入到类中，其实就是将对象赋值给构造函数的参数）  
-
-
-            //请求上下文注册
-            builder.RegisterType<Chenyuan.Lottery.Web.WebCore.WorkContext>().As<Chenyuan.Lottery.Web.WebCore.IWorkContext>().InstancePerRequest();
-            builder.RegisterType<Chenyuan.Lottery.Web.WebCore.WebHelperBase>().As<Chenyuan.Lottery.Web.WebCore.IWebHelper>().InstancePerRequest();
-
+            
 
             //第五步：将当前容器中的控制器工厂替换掉MVC默认的控制器工厂。（即：不要MVC默认的控制器工厂了，
             //用AutoFac容器中的控制器工厂替代）此处使用的是将AutoFac工作容器交给MVC底层 (需要using System.Web.Mvc;)  

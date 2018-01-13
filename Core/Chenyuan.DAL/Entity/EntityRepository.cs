@@ -15,7 +15,7 @@ using System.Data.Entity;
 using Chenyuan.Log;
 using Chenyuan.Data;
 
-namespace Chenyuan.DAL.Entity
+namespace Chenyuan.DAL
 {
     /// <summary>
     /// 实体仓储服务

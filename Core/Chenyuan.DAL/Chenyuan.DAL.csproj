@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Entity\EntityRepository.cs" />
     <Compile Include="Entity\IRepository.cs" />
+    <Compile Include="InjectionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

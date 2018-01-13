@@ -59,6 +59,12 @@
     <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -178,15 +184,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebCore\ISharedWorkContext.cs" />
-    <Compile Include="WebCore\IUserAccountIdentity.cs" />
-    <Compile Include="WebCore\IWebHelper.cs" />
-    <Compile Include="WebCore\IWorkContext.cs" />
-    <Compile Include="WebCore\Passport.cs" />
-    <Compile Include="WebCore\WebHelperBase.cs" />
     <Compile Include="WebCore\WorkContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Chenyuan-BaseSettings.txt.txt" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -240,7 +241,6 @@
     <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +252,10 @@
     <ProjectReference Include="..\..\Core\Chenyuan.Autofac\Chenyuan.Autofac.csproj">
       <Project>{FAD1B0B9-D803-47A5-B00E-D8788D95F0D8}</Project>
       <Name>Chenyuan.Autofac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Chenyuan.DAL\Chenyuan.DAL.csproj">
+      <Project>{AB6F5985-F6D2-444C-BFA5-36CEEBE68EEB}</Project>
+      <Name>Chenyuan.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Chenyuan.Date\Chenyuan.Date.csproj">
       <Project>{7D453151-CDC3-41F8-9777-70B94E162DC3}</Project>
