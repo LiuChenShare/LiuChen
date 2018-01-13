@@ -1,4 +1,5 @@
 ﻿using Chenyuan.Lottery.IServices;
+using Chenyuan.Lottery.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,21 @@ namespace Chenyuan.Lottery.Web.Controllers
             //    Response.Write(Session["userName"].ToString() + "---点击获取session"); //获取session，并写入页面
             //}
 
-            return Json(new { success = true});
+            return Json(new { Success = true});
+        }
+
+        /// <summary>
+        /// 登录HttpPost
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+
+        [HttpPost]
+        public ActionResult Check(UserRegisterModel model)
+        {
+            var a = 1;
+
+            return RedirectToAction("Index", "Account");
         }
     }
 }

@@ -46,7 +46,8 @@ namespace Chenyuan.Lottery.Services
 
         public void Logout()
         {
-            throw new NotImplementedException();
+            var _session = HttpContext.Current.Session;
+            _session.Clear();//直接清除Session
         }
 
         public AccountInfo GetAccountInfo(Guid id)

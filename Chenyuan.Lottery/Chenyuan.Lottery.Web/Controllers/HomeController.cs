@@ -8,11 +8,13 @@ namespace Chenyuan.Lottery.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [Authentication]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Authentication]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +22,7 @@ namespace Chenyuan.Lottery.Web.Controllers
             return View();
         }
 
+        [Authentication]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

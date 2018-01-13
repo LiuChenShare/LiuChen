@@ -176,7 +176,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ChenyuanControllerBase.cs" />
+    <Compile Include="Controllers\base\AuthenticationAttribute.cs" />
+    <Compile Include="Controllers\base\ChenyuanControllerBase.cs" />
     <Compile Include="InjectionHelper.cs" />
     <Compile Include="Timedtask\CensusdemoTask.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -276,6 +277,10 @@
     <ProjectReference Include="..\Chenyuan.Lottery.IServices\Chenyuan.Lottery.IServices.csproj">
       <Project>{76aaab48-97a9-4892-b432-f6bdf8490360}</Project>
       <Name>Chenyuan.Lottery.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chenyuan.Lottery.Model\Chenyuan.Lottery.Model.csproj">
+      <Project>{0b6fb38a-af84-4d0a-9cbb-64ae4c82277c}</Project>
+      <Name>Chenyuan.Lottery.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chenyuan.Lottery.Services\Chenyuan.Lottery.Services.csproj">
       <Project>{AB1B4101-2A6C-4C2D-93DD-CE7C6181DB06}</Project>

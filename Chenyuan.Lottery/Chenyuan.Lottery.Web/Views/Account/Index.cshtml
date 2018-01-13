@@ -1,4 +1,7 @@
-﻿@{
+﻿@model Chenyuan.Lottery.Model.UserRegisterModel
+@{
+    /**/
+
     ViewBag.Title = "Home Page";
 }
 
@@ -29,3 +32,29 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+
+
+<h2>客户端验证</h2>
+@Html.LabelFor(model => model.Account)
+@Html.EditorFor(model => model.Account)
+@Html.ValidationMessageFor(model => model.Account)
+
+@Html.ValidationSummary()
+@using (Html.BeginForm("Check", "Account", FormMethod.Post))
+{
+    <div> @Html.LabelFor(model => model.Account) </div>
+    <div> @Html.EditorFor(model => model.Account) </div>
+    <div> @Html.ValidationMessageFor(model => model.Account) </div>
+
+    <div> @Html.LabelFor(model => model.Password) </div>
+    <div> @Html.EditorFor(model => model.Password) </div>
+    <div> @Html.ValidationMessageFor(model => model.Password) </div>
+
+    <div> @Html.LabelFor(model => model.PasswordPalt) </div>
+    <div> @Html.EditorFor(model => model.PasswordPalt) </div>
+    <div> @Html.ValidationMessageFor(model => model.PasswordPalt) </div>
+    <input type="submit" value="提交" />
+}
+
+@Html.ValidationMessage("Error")
