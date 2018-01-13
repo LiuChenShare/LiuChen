@@ -20,7 +20,7 @@ namespace Chenyuan.Data.Base
 
         private static Dictionary<string, string> mappingAssembly = new Dictionary<string, string>
         {
-            {"Chenyuan-Base","Chenyuan.Data.HR.Mappings" },
+            {"Chenyuan-Base","Chenyuan.Data.Base.Mappings" },
         };
         public BaseDataContext Create()
         {

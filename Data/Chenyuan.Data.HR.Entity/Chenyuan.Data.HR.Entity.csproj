@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B6EF5C5-B3EB-4FCA-8F08-DB00DDFDC58E}</ProjectGuid>
+    <ProjectGuid>{9A3A09B1-9246-4DC3-A75F-FC8D9BF45CEA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Chenyuan.Data.HR.Entity</RootNamespace>

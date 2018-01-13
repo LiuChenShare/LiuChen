@@ -25,6 +25,9 @@ namespace Chenyuan.Data.Base
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
-        public DbSet<AccountInfo> EmployeeInfo { get; set; }
+        public DbSet<AccountInfo> AccountInfo { get; set; }
+        public DbSet<AppInfo> AppInfo { get; set; }
+        public DbSet<SystemInfo> SystemInfo { get; set; }
+        public DbSet<UserInfo> UserInfo { get; set; }
     }
 }

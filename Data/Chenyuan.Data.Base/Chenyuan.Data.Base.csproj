@@ -49,10 +49,14 @@
   <ItemGroup>
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="BaseDataContext.cs" />
+    <Compile Include="Migrations\201801130215491_Update2018-1-13.cs" />
+    <Compile Include="Migrations\201801130215491_Update2018-1-13.Designer.cs">
+      <DependentUpon>201801130215491_Update2018-1-13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +79,11 @@
       <Project>{e48b0be9-07fa-4e0f-8ada-aded823d1575}</Project>
       <Name>Chenyuan.Data.Base.Mappings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801130215491_Update2018-1-13.resx">
+      <DependentUpon>201801130215491_Update2018-1-13.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

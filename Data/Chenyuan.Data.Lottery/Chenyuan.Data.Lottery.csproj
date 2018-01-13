@@ -52,14 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Chenyuan.Data.Lottery.Entity\Chenyuan.Data.Lottery.Entity.csproj">
-      <Project>{f49131d8-9c4c-4cff-b4c8-f6537dee7f8d}</Project>
-      <Name>Chenyuan.Data.Lottery.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

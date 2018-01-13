@@ -66,10 +66,6 @@
       <Project>{AC03BB93-9668-4B5F-A719-482A489105A1}</Project>
       <Name>Chenyuan</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Chenyuan.Data.HR.Entity\Chenyuan.Data.HR.Entity.csproj">
-      <Project>{5b6ef5c5-b3eb-4fca-8f08-db00ddfdc58e}</Project>
-      <Name>Chenyuan.Data.HR.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

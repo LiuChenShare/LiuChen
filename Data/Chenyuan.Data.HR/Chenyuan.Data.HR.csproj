@@ -75,10 +75,6 @@
       <Project>{ac03bb93-9668-4b5f-a719-482a489105a1}</Project>
       <Name>Chenyuan</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Chenyuan.Data.HR.Entity\Chenyuan.Data.HR.Entity.csproj">
-      <Project>{5b6ef5c5-b3eb-4fca-8f08-db00ddfdc58e}</Project>
-      <Name>Chenyuan.Data.HR.Entity</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Chenyuan.Data.HR.Mappings\Chenyuan.Data.HR.Mappings.csproj">
       <Project>{0a184d1e-5bf5-426a-949d-e4eab74aa6bd}</Project>
       <Name>Chenyuan.Data.HR.Mappings</Name>

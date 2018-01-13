@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInfoRepository.cs" />
+    <Compile Include="AccountService.cs" />
     <Compile Include="BankInfoRepository.cs" />
     <Compile Include="LotteryNumberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,9 +59,17 @@
       <Project>{AC03BB93-9668-4B5F-A719-482A489105A1}</Project>
       <Name>Chenyuan</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\Chenyuan.Data.Base.Entity\Chenyuan.Data.Base.Entity.csproj">
+      <Project>{617C44F6-0400-482E-99E8-7D2CE4AB5C47}</Project>
+      <Name>Chenyuan.Data.Base.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\Chenyuan.Data.Lottery.Entity\Chenyuan.Data.Lottery.Entity.csproj">
-      <Project>{F49131D8-9C4C-4CFF-B4C8-F6537DEE7F8D}</Project>
+      <Project>{f49131d8-9c4c-4cff-b4c8-f6537dee7f8d}</Project>
       <Name>Chenyuan.Data.Lottery.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chenyuan.Lottery.IServices\Chenyuan.Lottery.IServices.csproj">
+      <Project>{76aaab48-97a9-4892-b432-f6bdf8490360}</Project>
+      <Name>Chenyuan.Lottery.IServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
